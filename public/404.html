@@ -10,7 +10,9 @@
       const hash = window.location.hash;
       
       // Redirect to the main app with the original path
-      window.location.href = `/${path}${search}${hash}`.replace(/\/+/g, '/');
+      // Remove leading slash to prevent double slashes
+      const cleanPath = path.replace(/^\//, '');
+      window.location.href = `/?redirect=${encodeURIComponent(cleanPath + search + hash)}`;
     </script>
     <meta http-equiv="refresh" content="0; URL=/">
   </head>
