@@ -6,6 +6,8 @@ import GlobalStyles from './styles/globalStyles';
 import Header from './components/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './pages/Home/HomePage';
+import PrivacyPage from './pages/Privacy/PrivacyPage';
+import TermsPage from './pages/Terms/TermsPage';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/privacy-policy" element={<PrivacyPage />} />
+            <Route path="/terms-of-service" element={<TermsPage />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
