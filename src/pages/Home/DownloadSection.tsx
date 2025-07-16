@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import AppStoreBadges from '../../components/AppStoreBadges';
 
 const DownloadContainer = styled.section`
   padding: ${({ theme }) => theme.spacing.xxl} 0;
@@ -35,33 +36,7 @@ const DownloadText = styled.div`
 
 
 
-const AppStoreButtons = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.spacing.md};
-  margin-top: ${({ theme }) => theme.spacing.md};
-  justify-content: center;
-  
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    flex-direction: column;
-    max-width: 200px;
-    margin: 0 auto;
-  }
-  
-  a {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-3px);
-    }
-    
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-  }
-`;
+
 
 const DownloadSection: React.FC = () => {
   return (
@@ -74,18 +49,7 @@ const DownloadSection: React.FC = () => {
               Join our community of savvy shoppers and start discovering exceptional grocery deals in your area.
               Available for iOS and Android devices.
             </p>
-            <AppStoreButtons>
-              <div style={{ width: '160px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
-                  <img src="/app-store-badge.svg" alt="Download on App Store" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                </a>
-              </div>
-              <div style={{ width: '160px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <a href="https://play.google.com" target="_blank" rel="noopener noreferrer">
-                  <img src="/google-play-badge.png" alt="Get it on Google Play" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                </a>
-              </div>
-            </AppStoreButtons>
+            <AppStoreBadges />
           </DownloadText>
 
         </DownloadContent>

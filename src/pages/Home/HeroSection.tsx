@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import AppStoreBadges from '../../components/AppStoreBadges';
 
 const HeroContainer = styled.section`
   padding: 8rem 0 5rem;
@@ -170,33 +171,6 @@ const AddButton = styled.div`
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 `;
 
-const AppStoreButtons = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.spacing.md};
-  
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    justify-content: center;
-  }
-  
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-    align-items: center;
-  }
-  
-  a {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-3px);
-    }
-  }
-`;
-
-
 
 const HeroSection: React.FC = () => {
   return (
@@ -209,18 +183,7 @@ const HeroSection: React.FC = () => {
               GroceryGold helps shoppers find and share amazing grocery deals in their local area. 
               Powered by a community of savvy shoppers who spot and share deals they find while shopping.
             </p>
-            <AppStoreButtons>
-              <div style={{ width: '160px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto' }}>
-                <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
-                  <img src="/app-store-badge.svg" alt="Download on App Store" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                </a>
-              </div>
-              <div style={{ width: '160px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto' }}>
-                <a href="https://play.google.com" target="_blank" rel="noopener noreferrer">
-                  <img src="/google-play-badge.png" alt="Get it on Google Play" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                </a>
-              </div>
-            </AppStoreButtons>
+            <AppStoreBadges />
           </HeroText>
           <HeroImage>
             <PhoneMockup>
