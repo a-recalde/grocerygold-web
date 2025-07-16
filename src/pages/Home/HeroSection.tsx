@@ -183,6 +183,7 @@ const AppStoreButtons = styled.div`
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
+    align-items: center;
   }
   
   a {
@@ -209,12 +210,12 @@ const HeroSection: React.FC = () => {
               Powered by a community of savvy shoppers who spot and share deals they find while shopping.
             </p>
             <AppStoreButtons>
-              <div style={{ width: '160px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: '160px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto' }}>
                 <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
                   <img src="/app-store-badge.svg" alt="Download on App Store" style={{ maxWidth: '100%', maxHeight: '100%' }} />
                 </a>
               </div>
-              <div style={{ width: '160px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: '160px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto' }}>
                 <a href="https://play.google.com" target="_blank" rel="noopener noreferrer">
                   <img src="/google-play-badge.png" alt="Get it on Google Play" style={{ maxWidth: '100%', maxHeight: '100%' }} />
                 </a>
